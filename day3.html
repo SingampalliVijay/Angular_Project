@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <main class="container">
+      <form id="studentForm">
+        <h1>Student Registration</h1>
+
+        <fieldset class="grid">
+          <div class="form-group">
+            <label for="roll">Roll No</label>
+            <input id="roll" name="roll" type="text" required />
+          </div>
+
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input id="firstName" name="firstName" type="text" required />
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input id="lastName" name="lastName" type="text" required />
+          </div>
+
+          <div class="form-group">
+            <label for="fatherName">Father's Name</label>
+            <input id="fatherName" name="fatherName" type="text" />
+          </div>
+
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input id="dob" name="dob" type="date" />
+          </div>
+
+          <div class="form-group">
+            <label for="mobile">Mobile Number</label>
+            <div class="mobile-row">
+              <select
+                id="countryCode"
+                name="countryCode"
+                class="mobileNo"
+                aria-label="Country code"
+              >
+                <option value="+91">+91</option>
+                <option value="+1">+1</option>
+                <option value="+44">+44</option>
+              </select>
+              <input
+                id="mobile"
+                name="mobile"
+                type="tel"
+                pattern="[0-9]{6,15}"
+                placeholder="123456789"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" />
+          </div>
+
+          <div class="form-group">
+            <span class="label">Gender</span>
+            <div
+              class="gender-group"
+              role="radiogroup"
+              aria-labelledby="genderLabel"
+            >
+              <label
+                ><input type="radio" name="gender" value="male" /> Male</label
+              >
+              <label
+                ><input type="radio" name="gender" value="female" />
+                Female</label
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <span class="label">Department</span>
+            <div class="department-group">
+              <label
+                ><input type="checkbox" name="dept" value="CSE" /> CSE</label
+              >
+              <label><input type="checkbox" name="dept" value="IT" /> IT</label>
+              <label
+                ><input type="checkbox" name="dept" value="ECE" /> ECE</label
+              >
+              <label
+                ><input type="checkbox" name="dept" value="MECH" /> MECH</label
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="courseSelect">Course</label>
+            <select id="courseSelect" name="courseSelect">
+              <option value="">Select a course</option>
+              <option>JAVA</option>
+              <option>PYTHON</option>
+              <option>SQL</option>
+              <option>JAVASCRIPT</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="photo">Student Photo</label>
+            <input id="photo" name="photo" type="file" accept="image/*" />
+          </div>
+
+          <div class="form-group">
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" />
+          </div>
+
+          <div class="form-group">
+            <label for="courseText">Course (text)</label>
+            <input id="courseText" name="courseText" type="text" />
+          </div>
+
+          <div class="form-group full">
+            <label for="address">Address</label>
+            <textarea id="address" name="address"></textarea>
+          </div>
+
+          <div class="form-actions full">
+            <button type="submit" class="btn">Register</button>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
